@@ -1,0 +1,57 @@
+.sobre_miniblog{
+    text-align: center;
+    padding: 50px 0px ;
+}
+
+.sobre_miniblog h1{
+    font-size: 44px;
+    margin-bottom: 50px;
+}
+
+.sobre_miniblog p{
+    font-size: 20px;
+    margin-bottom: 60px;
+}
+
+.btn_container button{
+    color: white;
+    background-color: green;
+    width: 130px;
+    height: 40px;
+    font-size: 18px ;
+    border: none;
+    outline: none;
+    font-weight: 
+    bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media (max-width:400px) {
+
+    .sobre_miniblog h1{
+        font-size: 32px;
+        margin-bottom: 50px;
+    }
+
+    .sobre_miniblog p{
+        font-size: 16px;
+        margin-bottom: 60px;
+    }
+
+
+    .btn_container button{
+        color: white;
+        background-color: green;
+        width: 100px;
+        height: 40px;
+        font-size: 16px ;
+        border: none;
+        outline: none;
+        font-weight: 
+        bold;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    
+}

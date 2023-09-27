@@ -1,0 +1,6 @@
+.novo_post_container{
+    padding: 50px 0px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

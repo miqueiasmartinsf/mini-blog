@@ -1,0 +1,182 @@
+.header_container{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#4300d2;
+}
+
+.logo_container{
+    width: 250px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo_container h1{
+    font-weight: 100;
+    font-size: 26px;
+}
+
+.logo_container a{
+    text-decoration: none;
+    color: white;
+
+}
+
+.logo_container span{
+    font-weight: bold;
+}
+
+.nav_list{
+    display: flex;
+    width: 550px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav_list a{
+    text-decoration: none;
+    padding: .4rem .5rem;
+    color: white;
+    transition: .3s;
+}
+
+.nav_list a:hover{
+    background-color: white;
+    color: black;
+}
+
+
+.logout{
+    background-color: red;
+    color: white;
+
+}
+
+
+.hidden{
+    display: none;
+}
+
+.visible{
+    display: flex;
+}
+
+.mobile_menu{
+    display: none;
+    padding: 0rem 1rem;
+}
+
+.mobile_nav{
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background-color: #4300d2;
+    width: 100%;
+    height: 300px;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.mobile_nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    padding: .5rem;
+}
+
+.mobile_nav a:hover{
+    background-color: white;
+    color: black;
+    transition: .3s;
+
+}
+
+
+.mobile_menu div{
+    width: 32px;
+    height: 2px;
+    background-color: #fff;
+    margin: 8px;
+}
+
+@media (max-width:800px) {
+    .nav_list a{
+        display: none;
+    }
+
+    .nav_list{
+        position: absolute;
+        top: 80px;
+
+        width: 100px;
+
+    }
+
+    .mobile_menu{
+        display: block;
+    }
+}
+
+@media (max-width:400px) {
+
+    .logo_container{
+        width: 180px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .logo_container h1{
+        font-weight: 100;
+        font-size: 20px;
+    }
+
+    
+    .nav_list{
+        display: none;
+        width: 550px;
+        height: 80px;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .mobile_nav{
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: #4300d2;
+        width: 100%;
+        height: 300px;
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        flex-direction: column;
+    }
+    
+    .mobile_nav a{
+        color: white;
+        text-decoration: none;
+        font-size: 22px;
+        padding: .5rem;
+        text-align: center;
+    }
+    
+    .mobile_nav a:hover{
+        background-color: white;
+        color: black;
+        transition: .3s;
+    
+    }
+}
