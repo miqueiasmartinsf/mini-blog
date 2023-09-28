@@ -4,20 +4,32 @@ import styles from './EditPostContainer.module.css'
 //Firebase
 import { db } from '../../../../../firebase/config';
 import { getDoc,doc,updateDoc } from 'firebase/firestore';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 
 import {useNavigate} from 'react-router-dom'
 
 
 import {toast} from 'react-toastify'
 
-const EditPostContainer = ({ data }) => {
+const EditPostContainer = ({data}) => {
 
 
-    const[title,setTitle] = useState(data.title);
-    const[description,setDescription] = useState(data.description);
-    const[img,setImg] = useState(data.img);
-    const[tags,setTags] = useState(data.tags);
+    useEffect(() => {
+        setTitle(data.title)
+        setDescription(data.description);
+        setImg(data.img);
+        setTags(data.tags);
+    },[data])
+
+
+
+    const[title,setTitle] = useState('');
+    const[description,setDescription] = useState('');
+    const[img,setImg] = useState('');
+    const[tags,setTags] = useState('');
+
+
+    
 
 
     const navigate = useNavigate();
