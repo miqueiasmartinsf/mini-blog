@@ -66,6 +66,13 @@ const CreatePost = () => {
         setPostTitle('');
     }
 
+
+
+
+
+
+
+
     return(
         <div className={styles.create_post_container}>
             <h1>Criar Post</h1>

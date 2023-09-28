@@ -44,7 +44,7 @@ const Post = ({data}) => {
                 <p>{data.description}</p>
             </div>
             <div className={styles.tags_container}>
-                <p>#viagem #europa</p>
+                <p>{data.tags}</p>
             </div>
         </div>
     )
