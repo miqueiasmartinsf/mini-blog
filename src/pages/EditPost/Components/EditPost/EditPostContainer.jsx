@@ -14,10 +14,10 @@ import {toast} from 'react-toastify'
 const EditPostContainer = ({ data }) => {
 
 
-    const[title,setTitle] = useState('');
-    const[description,setDescription] = useState('');
-    const[img,setImg] = useState('');
-    const[tags,setTags] = useState('');
+    const[title,setTitle] = useState(data.title);
+    const[description,setDescription] = useState(data.description);
+    const[img,setImg] = useState(data.img);
+    const[tags,setTags] = useState(data.tags);
 
 
     const navigate = useNavigate();
@@ -39,27 +39,13 @@ const EditPostContainer = ({ data }) => {
             })
 
             navigate('/');
-            toast.success('Publicação editada com sucesso')
+            toast.success('Publicação editada com sucesso');
 
         }catch(error){
             console.log(error);
             toast.error('Erro ao editar')
         }
     }
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
 
     return (
         <div className={styles.edit_post_container}>
