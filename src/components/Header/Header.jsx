@@ -1,20 +1,14 @@
 import styles from './Header.module.css'
 
 //Hooks 
-
 import { useContext, useEffect, useState } from 'react'
 
 //ReactRouter 
-
 import {Link} from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 
-
 //Context
-
 import userContext from '../../context/userContext'
-
-
 
 //Firebase
 
@@ -28,12 +22,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Header = () => {
 
-
     const [mobileMenuState,setMobileMenuState] = useState(`${styles.mobile_nav} ${styles.hidden}`);
 
-
-
-    
     const updateMenu = () => {
         if(mobileMenuState === `${styles.mobile_nav} ${styles.hidden}`){
             setMobileMenuState(`${styles.mobile_nav} ${styles.visible}`)
@@ -42,21 +32,14 @@ const Header = () => {
         }
     }
 
-
-
-
-
     const navigate = useNavigate();
 
-
     const logOutNotify = () => toast.error('Deslogado');
-
 
     //SignOut Firebase
     const [signOut, loading, error] = useSignOut(auth);
 
     const {userStat,setUserStat} = useContext(userContext)
-
 
     const logOut = async() => {
         const success = await signOut();
@@ -91,10 +74,10 @@ const Header = () => {
                         <Link onClick={logOut} className={styles.logout}>Sair</Link>
                     </div>
                     <div className={mobileMenuState}>
-                        <Link to={'/'}>Home</Link>
-                        <Link to={'novo-post'}>Novo post</Link>
-                        <Link to={'dashboard'}>Dashboard</Link>
-                        <Link to={'about'}>Sobre</Link>
+                        <Link onClick={updateMenu} to={'/'}>Home</Link>
+                        <Link onClick={updateMenu} to={'novo-post'}>Novo post</Link>
+                        <Link onClick={updateMenu} to={'dashboard'}>Dashboard</Link>
+                        <Link onClick={updateMenu} to={'about'}>Sobre</Link>
                         <Link onClick={logOut} className={styles.logout}>Sair</Link>
                     </div>
                 </nav>
@@ -113,13 +96,11 @@ const Header = () => {
                     </div>
 
                     <div className={mobileMenuState}>
-                        <Link to={'/'}>Home</Link>
-                        <Link to={'entrar'}>Entrar</Link>
-                        <Link to={'cadastrar'}>Cadastrar</Link>
-                        <Link to={'about'}>Sobre</Link>
+                        <Link onClick={updateMenu} to={'/'}>Home</Link>
+                        <Link onClick={updateMenu} to={'entrar'}>Entrar</Link>
+                        <Link onClick={updateMenu} to={'cadastrar'}>Cadastrar</Link>
+                        <Link onClick={updateMenu} to={'about'}>Sobre</Link>
                     </div>
-
-
                 </nav>
             )}
         </div>

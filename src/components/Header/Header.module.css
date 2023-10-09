@@ -124,6 +124,7 @@
     .mobile_menu{
         display: block;
     }
+
 }
 
 @media (max-width:400px) {
